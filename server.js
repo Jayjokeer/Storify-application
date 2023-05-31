@@ -6,6 +6,7 @@ const session = require('express-session')
 const exphbs = require('express-handlebars')
 const app = express()
 const path = require('path')
+const methodOverride = require('method-override')
 const passport = require('passport')
 const mongoose = require('mongoose')
 const Mongostore = require('connect-mongo')
@@ -24,12 +25,22 @@ app.use(session({
   }))
 app.use(passport.initialize())
 app.use(passport.session())
+//set global variable
+app.use(function(req,res,next){
+    res.locals.user=req.user || null
+    next()
+})
+//set method override
+app.use(methodOverride('_method'))
+
+//develpoment environment
 if(process.env.NODE_ENV === 'development'){ 
     app.use(morgan('dev'))
 }
-
+//handlebars helpers
+const {formatDate,truncate,stripTags,editIcon,select} = require('./helpers/hbs')
 //view engine
-app.engine('hbs',exphbs.engine({extname:'.hbs',defaultLayout:'main'}))
+app.engine('hbs',exphbs.engine({helpers:{formatDate,truncate,stripTags,editIcon,select},extname:'.hbs',defaultLayout:'main'}))
 app.set('view engine','hbs')
 app.set('views', './views')
 
