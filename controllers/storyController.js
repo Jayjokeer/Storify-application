@@ -14,7 +14,6 @@ const addNewStory = async(req,res)=>{
             user:req.body.user
         }
         const saveStory = await storydb.create(storyPost)
-        console.log(saveStory)
         res.redirect('/dashboard')
     }catch(err){
         console.log(err)
@@ -83,8 +82,6 @@ const updateStory = async(req,res)=>{
         if(!story){
             res.render('errors/404')
         }
-        console.log(story.user)
-        console.log(req.user._id)
         if(story.user == req.user.id){
             await storydb.findByIdAndUpdate({_id:id},req.body,{
                 new:true,
