@@ -34,9 +34,10 @@ app.use(function(req,res,next){
 app.use(methodOverride('_method'))
 
 //develpoment environment
-if(process.env.NODE_ENV === 'development'){ 
+/*if(process.env.NODE_ENV === 'development'){ 
     app.use(morgan('dev'))
-}
+}*/
+app.use(morgan('dev'))
 //handlebars helpers
 const {formatDate,truncate,stripTags,editIcon,select} = require('./helpers/hbs')
 //view engine
