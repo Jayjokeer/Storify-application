@@ -51,5 +51,5 @@ app.use('/auth',require('./routes/auth'))
 app.use('/stories',require('./routes/stories'))
 
 app.listen(port,()=>{
-    console.log(`server running on ${process.env.NODE_ENV} mode http://localhost:${port}`)
+    console.log(`server running on http://localhost:${port}`)
 })
