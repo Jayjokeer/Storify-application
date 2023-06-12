@@ -19,7 +19,7 @@ module.exports = function(passport){
                 lastName:profile.name.familyName,
                 image:profile.photos[0].value
             }
-
+            console.log(profile)
             try{
                 const foundUser= await userdb.findOne({googleId:profile.id})
                 if(foundUser){
