@@ -4,8 +4,8 @@
   "description": "",
   "main": "server.js",
   "scripts": {
-    "dev": "set NODE_ENV = development && nodemon server",
-    "start": "node server"
+    "dev": "nodemon app",
+    "start": "node app"
   },
   "author": "john tom",
   "license": "ISC",
