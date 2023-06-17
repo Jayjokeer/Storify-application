@@ -2,7 +2,7 @@
   "name": "bookify",
   "version": "1.0.0",
   "description": "",
-  "main": "server.js",
+  "main": "app.js",
   "scripts": {
     "dev": "nodemon app",
     "start": "node app"
