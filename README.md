@@ -40,4 +40,4 @@ If you find a bug or have an idea for an improvement,
 please open an issue or submit a pull request on the GitHub repository.
 
 LICENSE
-This project is licensed under the MIT License.
+This project is licensed under the ISC License.
