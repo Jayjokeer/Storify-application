@@ -4,13 +4,13 @@ designed to provide a simple and efficient platform for creating and managing st
 This README file provides an overview of the application, installation instructions, and usage guidelines.
 
 #### DEPENDACIES USED
-[*] Express
-[*] Mongoose
-[*] Passport
-[*] passport-google-oauth20
-[*] Bcrypt
-[*] Jsonwebtoken(JWT)
-[*] Express-handlebars
+[#] Express
+[#] Mongoose
+[#] Passport
+[#] passport-google-oauth20
+[#] Bcrypt
+[#] Jsonwebtoken(JWT)
+[#] Express-handlebars
 
 ### FEATURES
 User registration and authentication using Passport Users can create an account, log in, and manage their own stories.
